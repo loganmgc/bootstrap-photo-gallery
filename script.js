@@ -5,12 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
         'img/06.jpeg', 'img/07.jpeg', 'img/08.jpeg', 'img/09.jpeg', 'img/10.jpeg',
         'img/11.jpeg', 'img/12.jpeg'
     ];
-    let index = 0;
-
     const imageContainer = document.getElementById('imageContainer');
     const modalImage = document.getElementById('modalImage');
     const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
-
     images.forEach((src, index) => {
         const imgElement = document.createElement('img');
         imgElement.src = src;
@@ -24,9 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         imageContainer.appendChild(imgElement);
     });
-
     const hbgimg = document.getElementById('hbgimg');
-
+    let index = 0;
     function changeImage() {
         hbgimg.classList.add('fade-out');
         setTimeout(() => {
@@ -35,6 +31,5 @@ document.addEventListener('DOMContentLoaded', function () {
             hbgimg.classList.remove('fade-out');
         }, 500);
     }
-
     setInterval(changeImage, 5000);
 });
