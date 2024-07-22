@@ -1,0 +1,12 @@
+#hbgimg {
+    height: 250px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("img/01.jpeg");
+    justify-content: center;
+    align-content: center;
+    transition: opacity 1s ease-in-out;
+}
+.fade-out{
+    opacity: 0;
+}
